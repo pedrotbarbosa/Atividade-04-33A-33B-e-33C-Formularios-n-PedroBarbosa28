@@ -1,0 +1,31 @@
+<h1>{{ action }} Jogos</h1>
+
+<form method="post">
+  {% csrf_token %}
+  <div>
+    <label>Título:</label>
+    <input name="titulo" value="{{ jogo.titulo }}">
+  </div>
+
+  <div>
+    <label>Empresa:</label>
+    <input name="empresa" value="{{ jogo.empresa }}">
+  </div>
+
+<div>
+    <label>Jogabilidade:</label>
+    <input name="jogabilidade" value="{{ jogo.jogabilidade }}">
+  </div>
+  
+  <div>
+    <label>Gênero:</label>
+    <input name="genero" value="{{ jogo.genero }}">
+  </div>
+
+    <div>
+    <label>Data de Lançamento:</label>
+    <input type="date" name="lancamento" value="{{ jogo.lancamento }}">
+  </div>
+
+  <input type="submit" value="Registrar">
+</form>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% load static %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Pedro Taveira Roberto Barbosa</title>
+  <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="blue-center">
+  <h1>Welcome to P2B! - Página Pedro Barbosa</h1>
+  </div>
+  
+    <div class="blue-center">
+  <h2 style="color: red"> Meus filmes e jogos favoritos de todos os tempos</h2>
+    </div>
+
+  
+  <p style="text-align: center;">
+    <b> Bem vindo à P2B! A Página Pedro Barbosa.</b> <i>Sim, o próprio.</i> </p> 
+  <p style="text-align: center;">
+    Aqui, você terá o <b>privilégio</b> de aprender um pouco mais sobre mim. Para você saber o que são as <b>coisas boas da vida</b>, organizei duas listas a respeito de dois temas pelos quais me interesso: filmes e jogos.
+      </p>
+    <p style="text-align: center;">
+      Primeiramente, uma <b>lista ordenada</b> dos <b><u>Meus Filmes Favoritos De Todos Os Tempos</u></b>. Em seguida, uma <b>lista não-ordenada</b> dos <b><u>Meus Jogos Favoritos De Todos Os Tempos</u></b>
+  </p>
+  
+    <div class="blue-center">
+  <h2 style="color: red"> Meus filmes favoritos de todos os tempos</h2>
+    </div>
+  <div class="blue-center">
+    <div><img src="https://pbs.twimg.com/media/D4eLnI8WsAAbP0K.jpg" width="450"></div>
+  <!--
+    <ol>
+    <li>Tropa de Elite</li>
+    <li>Interestellar</li>
+    <li>Carros</li>
+    <li>Batman: O Cavaleiro das Trevas</li>
+    <li>Cidade de Deus</li>
+    <li>O Lobo de Wall Street</li>
+  </ol>
+    -->
+ <div class="blue-center">
+<ol>
+    {% for filme in flm %}
+      <li>
+        {{ filme.titulo }}
+        <a href="/filmes/update/{{ filme.id }}">Atualizar</a>
+        <a href="/filmes/delete/{{ filme.id }}">Remover</a>
+      </li>
+    {% endfor %}
+  </ol>
+  <a href="/filmes">Adicionar Novo Filme</a>
+</div>   
+    
+  <!--
+    <p style="text-align: center;"> <i>Ain, Pedro, mas Carros é um filme de criança!</i> <b>Carros é pic@!</b> Filme sobre <b>HUMILDADE</b>. Coisa que tá faltando nesse mundo, principalmente em páginas para disciplinas da faculdade por aí...</p>
+    -->
+
+    <div class="blue-center">
+  <h2 style="color: red"> Minhas franquias de jogos favoritas de todos os tempos</h2>
+    </div>
+  
+ <div class="blue-center">
+    <div><img src="https://steamuserimages-a.akamaihd.net/ugc/791987107622180617/83A08924B8B1B410A98621CEA2453FBAE4701587/?imw=1024&imh=576&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true" width="450"></div>
+
+   <!--
+  <ul>
+    <li>GTA</li>
+    <li>Mortal Kombat</li>
+    <li>FIFA</li>
+    <li>Call of Duty</li>
+    <li>Batman Arkham Series</li>
+    <li>God of War</li>
+  </ul>
+   -->
+
+<div class="blue-center">
+<ol>
+    {% for jogo in jogos %}
+      <li>
+        {{ jogo.titulo }}
+        <a href="/jogos/update/{{ jogo.id }}">Atualizar</a>
+        <a href="/jogos/delete/{{ jogo.id }}">Remover</a>
+      </li>
+    {% endfor %}
+  </ol>
+  <a href="/jogos">Adicionar Novo Jogo</a>
+</div>   
+
+
+         <!--
+    <p style="text-align: center;"> <i>Pedro, mas essas franquias têm vários jogos! Pelo menos diz seu jogo favorito de cada uma das séries!</i> <b>Então toma o gabarito, meu fã:</b>
+
+    <ul>
+    <li>GTA: GTA V</li>
+    <li>Mortal Kombat: Mortal Kombat 9</li>
+    <li>FIFA: FIFA 14</li>
+    <li>Call of Duty: Call of Duty Black Ops II</li>
+    <li>Batman Arkham Series: Batman Arkham Asylum</li>
+    <li>God of War: God of War 3</li>
+  </ul>
+      </p>
+      -->
+
+    <p style="text-align: center;"> Tá bom de me conhecer já ou quer a senha do meu cartão também? Já é o suficiente, agora mete o pé daqui antes que eu coloque um vírus nesse teu PC </p>
+
+<p style="text-align: center;"> <b style="color: red"> Link do vírus: </b> <a href="google.com" target="_blank">https://www.youtube.com/watch?v=dQw4w9WgXcQ</a> </p>
+    
+</body>
+
+</html>
